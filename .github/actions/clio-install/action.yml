@@ -24,9 +24,3 @@ runs:
     - name: Install package
       shell: powershell
       run: .\ClioTool\clio.exe install ${{ inputs.folder }} -u ${{ inputs.url }} -l ${{ inputs.login }} -p ${{ inputs.password }};
-    - name: Restart application
-      shell: powershell
-      run: .\ClioTool\clio.exe restart -u ${{ inputs.url }} -l ${{ inputs.login }} -p ${{ inputs.password }};
-    - name: Clean Redis
-      shell: powershell
-      run: .\ClioTool\clio.exe flushdb -u ${{ inputs.url }} -l ${{ inputs.login }} -p ${{ inputs.password }};
