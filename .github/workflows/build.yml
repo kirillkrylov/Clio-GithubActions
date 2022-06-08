@@ -66,10 +66,6 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
-      - name: Build repository before push
-        shell: powershell
-        run: |
-          dotnet build .\DemoPipeline\DemoPipeline.sln --configuration Release --no-incremental -noWarn:CS1998,MSB3061,MSB3245;
       - name: Push to destination
         uses: ./.github/actions/clio-install
         with:

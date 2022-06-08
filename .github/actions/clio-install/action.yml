@@ -18,6 +18,8 @@ inputs:
 runs: 
   using: "composite"
   steps:
+    - shell: powershell
+      run: dotnet build ${{ inputs.folder }}\${{ inputs.folder }}.csproj;
     - run: dotnet tool install clio --tool-path .\ClioTool;
       shell: powershell
     - run: .\ClioTool\clio.exe install ${{ inputs.folder }} -u ${{ inputs.url }} -l ${{ inputs.login }} -p ${{ inputs.password }};
