@@ -42,7 +42,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          cd .\.solution;
+          cd .\DemoPipeline;
           dotnet test `
             /p:CollectCoverage=true /p:CoverletOutputFormat=opencover `
             /p:CoverletOutput="..\TestResults\coverage.opencover.xml";
