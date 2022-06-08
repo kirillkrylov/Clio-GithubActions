@@ -42,27 +42,23 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          cd .\DemoPipeline;
-          dotnet build DemoPipeline.sln;
-          dotnet test DemoPipeline.sln `
+          dotnet test .\DemoPipeline\DemoPipeline.sln `
             /p:CollectCoverage=true /p:CoverletOutputFormat=opencover `
             /p:CoverletOutput="..\TestResults\coverage.opencover.xml";
-          cd ..;
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          cd .\DemoPipeline;
-          .\..\.sonar\scanner\dotnet-sonarscanner begin `
+          .\.sonar\scanner\dotnet-sonarscanner begin `
             /k:"kirillkrylov_Clio-GithubActions" `
             /o:"kirillkrylov" `
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}" `
             /d:sonar.host.url="https://sonarcloud.io" `
             /d:sonar.cs.opencover.reportsPaths=".\..\TestResults\**\coverage.opencover*.xml";
-          dotnet build;
-          .\..\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+          dotnet build .\DemoPipeline\DemoPipeline.sln;
+          .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
   deploy:
     name: Deploy
     needs: build
@@ -73,9 +69,7 @@ jobs:
       - name: Build repository before push
         shell: powershell
         run: |
-          cd .\.solution;
-          dotnet build --configuration Release --no-incremental -noWarn:CS1998,MSB3061,MSB3245  --framework net472;
-          dotnet build-server shutdown;
+          dotnet build .\DemoPipeline\DemoPipeline.sln --configuration Release --no-incremental -noWarn:CS1998,MSB3061,MSB3245;
       - name: Push to destination
         uses: ./.github/actions/clio-pushw
         with:
