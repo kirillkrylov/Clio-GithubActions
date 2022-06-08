@@ -53,7 +53,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         shell: powershell
         run: |
-          cd .\.solution;
+          cd .\DemoPipeline;
           .\..\.sonar\scanner\dotnet-sonarscanner begin `
             /k:"kirillkrylov_MicrosoftTeamsForCreatio" `
             /o:"kirillkrylov" `
