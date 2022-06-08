@@ -55,7 +55,7 @@ jobs:
         run: |
           cd .\DemoPipeline;
           .\..\.sonar\scanner\dotnet-sonarscanner begin `
-            /k:"kirillkrylov_MicrosoftTeamsForCreatio" `
+            /k:"kirillkrylov_Clio-GithubActions" `
             /o:"kirillkrylov" `
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}" `
             /d:sonar.host.url="https://sonarcloud.io" `
