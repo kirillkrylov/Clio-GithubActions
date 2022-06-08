@@ -1,0 +1,16 @@
+{
+  "Descriptor": {
+    "UId": "a1edcad0-b395-4b41-be8d-dc66cc108e33",
+    "PackageVersion": "7.8.0",
+    "Name": "DemoPipeline",
+    "ModifiedOnUtc": "/Date(1654694751000)/",
+    "Maintainer": "Customer",
+    "DependsOn": [
+        {
+            "UId": "2fabaf6c-0f92-4530-aef8-40345c021da2",
+            "PackageVersion": "7.8.0",
+            "Name": "ProductCore"
+        }
+    ]
+  }
+}

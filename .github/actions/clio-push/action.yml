@@ -1,0 +1,24 @@
+name: 'Clio install'
+description: 'Push package to target'
+inputs:
+  folder: 
+    description: 'Folder to install'
+    required: true
+  url:
+    description: 'Destination url'
+    required: true
+  login:
+    description: 'Destination username'
+    required: true
+    default: 'Supervisor'
+  password:
+    description: 'Destination password'
+    required: true
+    default: 'Supervisor'
+runs: 
+  using: "composite"
+  steps:
+    - run: dotnet tool install clio --tool-path .\ClioTool;
+      shell: powershell
+    - run: .\ClioTool\clio.exe install ${{ inputs.folder }} -u ${{ inputs.url }} -l ${{ inputs.login }} -p ${{ inputs.password }};
+      shell: powershell

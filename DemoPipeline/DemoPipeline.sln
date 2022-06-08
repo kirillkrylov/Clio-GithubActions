@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32526.322
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoPipeline", "DemoPipeline.csproj", "{A1EDCAD0-B395-4B41-BE8D-DC66CC108E33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoPipeline.Tests", "..\DemoPipeline.Tests\DemoPipeline.Tests.csproj", "{7BC491EC-300A-4CC1-A62D-0B91B9147586}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1EDCAD0-B395-4B41-BE8D-DC66CC108E33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1EDCAD0-B395-4B41-BE8D-DC66CC108E33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1EDCAD0-B395-4B41-BE8D-DC66CC108E33}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1EDCAD0-B395-4B41-BE8D-DC66CC108E33}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7BC491EC-300A-4CC1-A62D-0B91B9147586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BC491EC-300A-4CC1-A62D-0B91B9147586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BC491EC-300A-4CC1-A62D-0B91B9147586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BC491EC-300A-4CC1-A62D-0B91B9147586}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0817958B-DF9B-481F-B68B-56E5D56695CD}
+	EndGlobalSection
+EndGlobal
