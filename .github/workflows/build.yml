@@ -71,7 +71,7 @@ jobs:
         run: |
           dotnet build .\DemoPipeline\DemoPipeline.sln --configuration Release --no-incremental -noWarn:CS1998,MSB3061,MSB3245;
       - name: Push to destination
-        uses: ./.github/actions/clio-pushw
+        uses: ./.github/actions/clio-install
         with:
           folder: DemoPipeline 
           url: ${{ secrets.PROD_URL }}
