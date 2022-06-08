@@ -43,7 +43,7 @@ jobs:
         shell: powershell
         run: |
           cd .\DemoPipeline;
-          dotnet test DemoPipeline.sln`
+          dotnet test DemoPipeline.sln `
             /p:CollectCoverage=true /p:CoverletOutputFormat=opencover `
             /p:CoverletOutput="..\TestResults\coverage.opencover.xml";
           cd ..;
