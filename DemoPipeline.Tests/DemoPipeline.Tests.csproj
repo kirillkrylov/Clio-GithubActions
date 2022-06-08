@@ -20,9 +20,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Reference Include="DemoPipeline">
-		  <HintPath>..\DemoPipeline\Files\Bin\DemoPipeline.dll</HintPath>
-		</Reference>
+	  <ProjectReference Include="..\DemoPipeline\DemoPipeline.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<Reference Include="System.Web" />
 		<Reference Include="ServiceStack.Interfaces">
 			<HintPath>libs\ServiceStack.Interfaces.dll</HintPath>
