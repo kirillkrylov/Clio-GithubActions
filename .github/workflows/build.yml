@@ -43,7 +43,7 @@ jobs:
         shell: powershell
         run: |
           cd .\DemoPipeline;
-          dotnet test `
+          dotnet test DemoPipeline.sln`
             /p:CollectCoverage=true /p:CoverletOutputFormat=opencover `
             /p:CoverletOutput="..\TestResults\coverage.opencover.xml";
           cd ..;
@@ -59,8 +59,6 @@ jobs:
             /o:"kirillkrylov" `
             /d:sonar.login="${{ secrets.SONAR_TOKEN }}" `
             /d:sonar.host.url="https://sonarcloud.io" `
-            /d:sonar.exclusions=**/Documentation/**/* `
-            /d:sonar.coverage.exclusions=**/EventListener/*,**/MsGraph/* `
             /d:sonar.cs.opencover.reportsPaths=".\..\TestResults\**\coverage.opencover*.xml";
           dotnet build;
           .\..\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
