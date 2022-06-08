@@ -8,7 +8,7 @@ using Terrasoft.Web.Common;
 namespace DemoPipeline
 {
 	/// <summary>
-	/// https://121599-crm-bundle.creatio.com/0/DemoService/GetMethodExample
+	/// https://121599-crm-bundle.creatio.com/0/rest/DemoService/GetMethodExample
 	/// </summary>
 	[ServiceContract]
 	[AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
