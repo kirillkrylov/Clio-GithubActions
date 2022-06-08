@@ -1,1 +1,3 @@
-# Clio-GithubActions
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=kirillkrylov_Clio-GithubActions&metric=coverage)](https://sonarcloud.io/summary/new_code?id=kirillkrylov_Clio-GithubActions) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=kirillkrylov_Clio-GithubActions&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=kirillkrylov_Clio-GithubActions) [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=kirillkrylov_Clio-GithubActions&metric=bugs)](https://sonarcloud.io/summary/new_code?id=kirillkrylov_Clio-GithubActions) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=kirillkrylov_Clio-GithubActions&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=kirillkrylov_Clio-GithubActions)
+
+# [See pages](https://kirillkrylov.github.io/Clio-GithubActions/)
