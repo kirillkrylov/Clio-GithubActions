@@ -66,6 +66,9 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v3
+      - name: Build for deploy
+        shell: powershell
+        run: dotnet build .\DemoPipeline\DemoPipeline.sln;
       - name: Push to destination
         uses: ./.github/actions/clio-install
         with:

@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net472</TargetFramework>
+		<OutputPath>Files\Bin</OutputPath>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<RootNamespace>$(AssemblyName)</RootNamespace>
 		<PlatformTarget>x86</PlatformTarget>
